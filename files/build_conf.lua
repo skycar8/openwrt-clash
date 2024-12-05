@@ -135,6 +135,10 @@ local function update_dns(profile)
     profile_dns["listen"] = dns_host .. ":" .. dns_port
     profile_dns["default-nameserver"] = default_nameserver
     profile_dns["nameserver"] = nameserver
+    profile_dns["fake-ip-filter"] = profile["dns"]["fake-ip-filter"]
+    profile_dns["nameserver-policy"] = profile["dns"]["nameserver-policy"]
+    profile_dns["fallback"] = profile["dns"]["fallback"]
+    profile_dns["fallback-filter"] = profile["dns"]["fallback-filter"]
 
     profile["dns"] = profile_dns
 end
